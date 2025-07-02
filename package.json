@@ -1,0 +1,27 @@
+{
+  "name": "masumasu-brewery-website",
+  "version": "1.0.0",
+  "description": "益々酒造の公式ウェブサイト - 明治創業の新潟の老舗酒蔵",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Deploy to GitHub Pages'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/masumasu-brewery-website.git"
+  },
+  "keywords": [
+    "sake",
+    "brewery",
+    "japanese",
+    "alcohol",
+    "traditional",
+    "niigata",
+    "craft"
+  ],
+  "author": "益々酒造",
+  "license": "MIT",
+  "homepage": "https://username.github.io/masumasu-brewery-website"
+}
