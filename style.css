@@ -1,0 +1,446 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 0;
+}
+
+#main-visual {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+#main-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-visual-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.main-visual-overlay h1 {
+    font-size: clamp(2em, 5vw, 3em);
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.main-visual-overlay p {
+    font-size: clamp(1em, 3vw, 1.2em);
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+section {
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#about, #products, #brewery, #contact {
+    padding: 40px 20px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.about-logo {
+    flex: 0 0 auto;
+}
+
+.company-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+    min-width: 300px;
+}
+
+.about-content h2 {
+    margin-top: 0;
+    color: #1a365d;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        margin: 20px 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+    
+    #main-visual {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .about-content {
+        text-align: center;
+    }
+    
+    .company-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .greeting-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .toji-image {
+        width: 250px;
+        height: 300px;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .brewery-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .brewery-landscape, .brewery-seasons {
+        width: 90%;
+        min-width: unset;
+    }
+    
+    section {
+        padding: 20px 15px;
+    }
+    
+    #about, #products, #brewery, #contact {
+        padding: 20px 15px;
+    }
+    
+    #toji-greeting {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 40px;
+    }
+    
+    .main-visual-overlay {
+        padding: 15px;
+    }
+    
+    .about-content h2 {
+        font-size: 1.5em;
+    }
+    
+    .product {
+        padding: 15px;
+    }
+    
+    .product img {
+        height: 250px;
+    }
+    
+    .toji-image {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .nav-menu a {
+        font-size: 1.3em;
+    }
+    
+    .main-visual-overlay h1 {
+        font-size: 1.8em;
+    }
+    
+    .main-visual-overlay p {
+        font-size: 0.9em;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #1a365d;
+}
+
+.english-name {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.product-description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #555;
+    margin: 10px 0;
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.product-details span {
+    background-color: #f0f8ff;
+    color: #1a365d;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.sake-type {
+    background-color: #1a365d !important;
+    color: white !important;
+}
+
+.price {
+    font-weight: bold;
+    color: #d4af37;
+    font-size: 1.1em;
+    margin: 10px 0 5px 0;
+}
+
+.limited {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+#toji-greeting {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.greeting-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.toji-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border: 3px solid #1a365d;
+}
+
+.brewery-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.brewery-landscape, .brewery-seasons {
+    width: 45%;
+    min-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}

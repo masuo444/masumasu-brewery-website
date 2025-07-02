@@ -1,0 +1,39 @@
+// FOMUS Example File for Masumasu Brewery
+// Basic composition structure
+
+part "masumasu-melody" {
+    inst "piano"
+    
+    // Time signature and tempo
+    time 4/4
+    tempo 120
+    
+    // Simple melodic phrase inspired by traditional Japanese music
+    note (time 0 dur 1 pitch 60)      // C4
+    note (time 1 dur 1 pitch 62)      // D4
+    note (time 2 dur 1 pitch 64)      // E4
+    note (time 3 dur 1 pitch 67)      // G4
+    
+    note (time 4 dur 2 pitch 69)      // A4
+    note (time 6 dur 1 pitch 67)      // G4
+    note (time 7 dur 1 pitch 64)      // E4
+    
+    note (time 8 dur 4 pitch 60)      // C4 (whole note)
+}
+
+part "masumasu-harmony" {
+    inst "strings"
+    
+    // Harmonic accompaniment
+    note (time 0 dur 4 pitch 48)      // C3
+    note (time 0 dur 4 pitch 52)      // E3
+    note (time 0 dur 4 pitch 55)      // G3
+    
+    note (time 4 dur 4 pitch 45)      // A2
+    note (time 4 dur 4 pitch 48)      // C3
+    note (time 4 dur 4 pitch 52)      // E3
+    
+    note (time 8 dur 4 pitch 48)      // C3
+    note (time 8 dur 4 pitch 52)      // E3
+    note (time 8 dur 4 pitch 55)      // G3
+}
