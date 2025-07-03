@@ -31,7 +31,11 @@
 
     <main>
         <section id="main-visual">
-            <img src="images/main_image.png" alt="益々酒造のメインイメージ">
+            <div class="hero-slider">
+                <img src="images/main_image.png" alt="益々酒造のメインイメージ" class="hero-image active">
+                <img src="images/main.jpg" alt="益々酒造の酒蔵" class="hero-image">
+                <img src="images/brewery.jpg" alt="伝統的な酒造り" class="hero-image">
+            </div>
             <div class="main-visual-overlay">
                 <h1>益々酒造</h1>
                 <p>一献、また一献と、人々の縁が深まり、喜びが満ち溢れる</p>
@@ -56,7 +60,10 @@
 
         <section id="toji-greeting">
             <div class="greeting-flex">
-                <img src="images/toji_master.jpg" alt="五代目杜氏 益々一郎" class="toji-image">
+                <div class="toji-images">
+                    <img src="images/toji_master.jpg" alt="五代目杜氏 益々一郎" class="toji-image main-toji">
+                    <img src="images/toji.jpg" alt="杜氏の酒造り風景" class="toji-image secondary-toji">
+                </div>
                 <div class="greeting-text">
                     <h2>杜氏よりご挨拶</h2>
                     <p>わたくしが、五代目杜氏の益々 一郎（ますます いちろう）です。<br>
@@ -71,7 +78,7 @@
             <h2>商品</h2>
             <div class="product-grid">
                 <div class="product">
-                    <img src="images/1.png" alt="純米大吟醸「益々」">
+                    <img src="images/product1.jpg" alt="純米大吟醸「益々」">
                     <div class="product-info">
                         <h3>純米大吟醸「益々」<span class="english-name">/ Masu Masu - Zenith</span></h3>
                         <p class="product-description">華やかな吟醸香と、シルクのような滑らかな口当たり。米の旨味の余韻が長く続く。</p>
@@ -85,7 +92,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/2.png" alt="純米吟醸「益々」">
+                    <img src="images/product2.jpg" alt="純米吟醸「益々」">
                     <div class="product-info">
                         <h3>純米吟醸「益々」<span class="english-name">/ Masu Masu - Fragrance</span></h3>
                         <p class="product-description">メロンやリンゴを思わせるフルーティーな香り。軽快でキレの良い後味。</p>
@@ -98,7 +105,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/3.png" alt="特別純米酒「益々」">
+                    <img src="images/product3.jpg" alt="特別純米酒「益々」">
                     <div class="product-info">
                         <h3>特別純米酒「益々」<span class="english-name">/ Masu Masu - Tradition</span></h3>
                         <p class="product-description">米の旨味とコクがしっかりと感じられる。穏やかな香りで飲み飽きしない。</p>
@@ -111,7 +118,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/4.png" alt="本醸造「益々」">
+                    <img src="images/product4.jpg" alt="本醸造「益々」">
                     <div class="product-info">
                         <h3>本醸造「益々」<span class="english-name">/ Masu Masu - Classic</span></h3>
                         <p class="product-description">スッキリとした辛口で、抜群のキレ。毎日の晩酌に寄り添う味わい。</p>
@@ -124,7 +131,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/5.png" alt="にごり酒「益々」">
+                    <img src="images/product5.jpg" alt="にごり酒「益々」">
                     <div class="product-info">
                         <h3>にごり酒「益々」<span class="english-name">/ Masu Masu - Cloud</span></h3>
                         <p class="product-description">米の自然な甘みと、とろりとしたクリーミーな口当たり。</p>
@@ -138,7 +145,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/6.png" alt="スパークリング清酒「益々」">
+                    <img src="images/product6.jpg" alt="スパークリング清酒「益々」">
                     <div class="product-info">
                         <h3>スパークリング清酒「益々」<span class="english-name">/ Masu Masu - Celebration</span></h3>
                         <p class="product-description">きめ細やかな泡と、爽やかな酸味。乾杯シーンを華やかに彩る。</p>
@@ -150,7 +157,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/7.png" alt="貴醸酒「益々」">
+                    <img src="images/product7.jpg" alt="貴醸酒「益々」">
                     <div class="product-info">
                         <h3>貴醸酒「益々」<span class="english-name">/ Masu Masu - Noble</span></h3>
                         <p class="product-description">蜜のように濃厚な甘みと、複雑で奥深い味わい。長期熟成による琥珀色。</p>
@@ -163,7 +170,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/8.png" alt="古酒「益々」">
+                    <img src="images/product8.jpg" alt="古酒「益々」">
                     <div class="product-info">
                         <h3>古酒「益々」<span class="english-name">/ Masu Masu - Vintage</span></h3>
                         <p class="product-description">5年以上熟成。カラメルやナッツのような熟成香と、まろやかで深みのある味わい。</p>
@@ -177,7 +184,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/9.png" alt="季節限定酒「益々」">
+                    <img src="images/product9.jpg" alt="季節限定酒「益々」">
                     <div class="product-info">
                         <h3>季節限定酒「益々」<span class="english-name">/ Masu Masu - Seasonal</span></h3>
                         <p class="product-description">しぼりたてならではのフレッシュで力強い味わいと、華やかな香り。</p>
@@ -191,7 +198,7 @@
                     </div>
                 </div>
                 <div class="product">
-                    <img src="images/10.png" alt="梅酒「益々」">
+                    <img src="images/product10.jpg" alt="梅酒「益々」">
                     <div class="product-info">
                         <h3>梅酒「益々」<span class="english-name">/ Masu Masu - Plum</span></h3>
                         <p class="product-description">純米酒で漬け込んだ、上品な梅の香りと、すっきりとした甘さ。</p>
@@ -247,6 +254,19 @@
                     mobileMenuToggle.classList.remove('active');
                 });
             });
+            
+            // Hero image slider
+            const heroImages = document.querySelectorAll('.hero-image');
+            let currentImageIndex = 0;
+            
+            function showNextImage() {
+                heroImages[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+                heroImages[currentImageIndex].classList.add('active');
+            }
+            
+            // Change image every 5 seconds
+            setInterval(showNextImage, 5000);
         });
     </script>
 </body>

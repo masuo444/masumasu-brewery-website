@@ -86,10 +86,25 @@ main {
     margin-bottom: 40px;
 }
 
-#main-visual img {
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-image.active {
+    opacity: 1;
 }
 
 .main-visual-overlay {
@@ -288,9 +303,18 @@ section {
         height: 250px;
     }
     
-    .toji-image {
+    .toji-images {
+        align-items: center;
+    }
+    
+    .main-toji {
         width: 200px;
         height: 250px;
+    }
+    
+    .secondary-toji {
+        width: 200px;
+        height: 130px;
     }
     
     .nav-menu a {
@@ -414,13 +438,27 @@ img {
     text-align: left;
 }
 
+.toji-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .toji-image {
-    width: 300px;
-    height: 400px;
-    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     border: 3px solid #1a365d;
+    object-fit: cover;
+}
+
+.main-toji {
+    width: 300px;
+    height: 400px;
+}
+
+.secondary-toji {
+    width: 300px;
+    height: 200px;
 }
 
 .brewery-images {
